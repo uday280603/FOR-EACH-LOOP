@@ -3,46 +3,57 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>For Each</title>
+    <title>For Each Table</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
       integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <div class="container">
       <div class="row">
-        <div class="col-md-4 mt-4 " id="ListContainer1">
-          <ul class="list-group">
-            <li class="list-group-item">An item</li>
-            <li class="list-group-item">A second item</li>
-            <li class="list-group-item">A third item</li>
-            <li class="list-group-item">A fourth item</li>
-          </ul>
-        </div>
-         <div class="col-md-4 mt-4" id="ListContainer2">
-          <ul class="list-group">
-            <li class="list-group-item">An item</li>
-            <li class="list-group-item">A second item</li>
-            <li class="list-group-item">A third item</li>
-            <li class="list-group-item">A fourth item</li>
-          </ul>
-        </div>
-        <div class="col-md-4 mt-4" id="ListContainer3">
-          <!-- <ul class="list-group">
-            <li class="list-group-item">An item</li>
-            <li class="list-group-item">A second item</li>
-            <li class="list-group-item">A third item</li>
-            <li class="list-group-item">A fourth item</li>
-          </ul> -->
-        </div>
-        <div class="col-md-4 mt-4" id="ListContainer4">
+        <div class="card mt-4">
+          <div class="card-body">
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th scope="col">ID</th>
+                  <th scope="col">FNAME</th>
+                  <th scope="col">LNAME</th>
+                  <th scope="col">PHONE</th>
+                  <th scope="col">ADDRESS</th>
+                  <th scope="col">CLASS</th>
+                  <th scope="col">EDIT</th>
+                  <th scope="col">DELETE</th>
+                </tr>
+              </thead>
+              <tbody id="studentDataTable">
+                <tr>
+                  <td>1</td>
+                  <td>Rahul</td>
+                  <td>Sharma</td>
+                  <td>9876543210</td>
+                  <td>Pune</td>
+                  <td>10A</td>
+
+                  <td><i class="fa-solid fa-pen-to-square"></i></td>
+                  <td><i class="fa-regular fa-trash-can"></i></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>
-  
     <script src="./assets/js/app.js"></script>
   </body>
 </html>

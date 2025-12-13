@@ -1,61 +1,65 @@
 let cl = console.log;
 
+let students =[
+  {
+    "id": 1,
+    "fname": "Rahul",
+    "lname": "Sharma",
+    "phone": "9876543210",
+    "address": "Pune",
+    "class": "10A"
+  },
+  {
+    "id": 2,
+    "fname": "Priya",
+    "lname": "Patel",
+    "phone": "9123456780",
+    "address": "Ahmedabad",
+    "class": "9B"
+  },
+  {
+    "id": 3,
+    "fname": "Amit",
+    "lname": "Verma",
+    "phone": "9988776655",
+    "address": "Delhi",
+    "class": "12C"
+  },
+  {
+    "id": 4,
+    "fname": "Sneha",
+    "lname": "Joshi",
+    "phone": "9090909090",
+    "address": "Mumbai",
+    "class": "11A"
+  },
+  {
+    "id": 5,
+    "fname": "Rohit",
+    "lname": "Kumar",
+    "phone": "9555544444",
+    "address": "Patna",
+    "class": "8C"
+  }
+]
 
-let skills =["Html 5","Css","javascript","Bootstarp","Angular"];
-let result='';
-skills.forEach(function(skill){
-    result += `
-            <li class="list-group-item">i Love ${skill}</li>
-           
+let result =''
+
+students.forEach(function(student){
+ 
+    result +=`
+                  <td>${student.id}</td>
+                  <td>${student.fname}</td>
+                  <td>${student.fname}</td>
+                  <td>${student.phone}</td>
+                  <td>${student.address}</td>
+                  <td>${student.class}</td>
+
+                  <td><i class="fa-solid fa-pen-to-square"></i></td>
+                  <td><i class="fa-regular fa-trash-can"></i></td>
+                </tr>
     `
-});
+})
 
-let ListContainer1 = document.getElementById('ListContainer1');
-ListContainer1.innerHTML = result;
-
-//List 2
- let framewoks = ["spring","Angular","React","bootstrap","Microservices"];
-
- let frameWorksHtml=''
- framewoks.forEach(function(frame){
-
-    frameWorksHtml += `
-            <li class="list-group-item">${frame} framework</li>
-           
-    `
- });
-
- let ListContainer2 =document.getElementById('ListContainer2');
- ListContainer2.innerHTML = frameWorksHtml;
-
- //list 3
-
- let devops = ["Docker","Kubernetes","Jenkins","Github","Actions","Terraform"]
-
- let DataHtml = '<ul class="list-group">'
- devops.forEach(function(dev){
-
-    DataHtml +=`
-     <li class="list-group-item">${dev}</li>
-    `
- })
- DataHtml +='   </ul>';
-
- let ListContainer3 = document.getElementById('ListContainer3');
- ListContainer3.innerHTML = DataHtml;
-
-
- //List 4
-
- let softSkills = ['Communication','Leadership','Problem Solving','Teamwork','time Management'];
- let softSkillsHtml = ' <ul class="list-group">'
-
- softSkills.forEach(function(sof){
-    softSkillsHtml  += `
-     <li class="list-group-item">${sof}</li>
-    `
- })
-
- softSkillsHtml +='</ul>'
- let ListContainer4 = document.getElementById('ListContainer4');
- ListContainer4.innerHTML  = softSkillsHtml;
+let studentDataTable = document.getElementById('studentDataTable');
+studentDataTable.innerHTML =result
